@@ -6,7 +6,8 @@ void solve()
 {
     int x = 0, y = 0, z = 0;
     cin >> x >> y >> z;
-    cout << (abs(x - y)+abs(y-z)+abs(x-z))/2 << endl;
+    // cout << (abs(x - y)+abs(y-z)+abs(x-z))/2 << endl;
+    cout<<max(x,max(y,z))-min(x,min(y,z))<<endl;
 }
 
 int32_t main()
