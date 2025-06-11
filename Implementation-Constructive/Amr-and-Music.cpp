@@ -11,18 +11,20 @@ void solve()
     {
         int x = 0;
         cin >> x;
-        days.push_back(make_pair(x, i+1));
+        days.push_back(make_pair(x, i + 1));
     }
     sort(days.begin(), days.end());
-    int sum = 0;
+
     int i = 0;
     vector<int> ans;
+
     while (i < n)
     {
-        sum += days[i].first;
-        if (sum > k)
+
+        if (k < days[i].first)
             break;
         ans.push_back(days[i].second);
+        k -= days[i].first;
         i++;
     }
     cout << ans.size() << endl;
